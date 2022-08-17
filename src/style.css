@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(13, 144, 238),rgb(131, 199, 248));
+}
+
+.purpose {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bush {
+    position: absolute;
+    bottom: -10px;
+    width: 80px;
+    animation: bushMove 2.5s linear infinite;
+}
+
+.animal {
+    position: absolute;
+    width: 160px;
+    bottom: -6px;
+    left: 60px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    animation: slowMotion 25s linear infinite;
+}
+
+.clouds {
+    position: absolute;
+    width: 100px;
+    top: 150px;
+  
+    animation: slowMotion 30s linear infinite;
+}
+
+.cloudly {
+    position: absolute;
+    width: 100px;
+    top: 100px;
+    animation: slowMotion 40s linear infinite;
+}
+
+@keyframes bushMove {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: -10px;
+    }
+    
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    70% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: -10px;
+    }
+}
+
+@keyframes slowMotion {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 100%;
+    }
+}
